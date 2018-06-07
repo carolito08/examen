@@ -26,9 +26,9 @@ docker build . -t nombre-nueva-imagen
 		- backend site_backend 
 			- mode http stats enable 
 			- stats uri /haproxy?stats balance roundrobin  
-			- server lamp1 localhost:2020 check 
-			- server lamp2 localhost:3030 check  
-			- server lamp3 localhost:4040 check
+			- server lamp1 localhost:8081 check 
+			- server lamp2 localhost:8083 check  
+			- server lamp3 localhost:8084 check
 	*  #### Detenemos e iniciamos el servicio haproxy:
 		- sudo service haproxy stop
 		- sudo service haproxy start
